@@ -1,0 +1,109 @@
+
+        <!DOCTYPE html>
+<html>
+<head>
+    <title>Recycling Station Finder</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif; /* Using a modern font */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f8f8;;
+        }
+        .recycling-image{
+            animation: rotate 2s infinite linear;
+        }
+        @keyframes rotate {
+          from {
+          transform: rotate(0deg);
+          }
+         to {
+         transform: rotate(360deg);
+         }
+         }
+         .recycling-image{
+            mix-blend-mode: multiply;
+         }
+        .container {
+            text-align: center;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 10px 15px 8px rgba(0, 0, 0, 0.3);
+            background-color:rgb(214, 221, 185);
+            max-width: 400px; /* Limit width for better mobile responsiveness */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .recycling-image {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        /* Optional: Add a subtle hover effect to the button */
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <img src="recycle img 2.jpeg" alt="Recycling Logo" class="recycling-image">
+        <h1>What do you want to recycle? </h1>
+        <form>
+            <select id="material">
+                <option value="">Select</option>
+                <option value="plastic"> Plastic </option>
+                <option value="ewaste"> E-waste </option>
+                <option value="all"> All (Plastic/E-waste/Other) </option>
+            </select>
+            <button type="button" onclick="findStations()">Find Stations 🔍</button>
+        </form>
+    </div>
+
+    <script>
+        function findStations() {
+            var material = document.getElementById("material").value;
+
+            if (material === "plastic") {
+                window.location.href = "plastic_recycling.html";
+            } else if (material === "ewaste") {
+                window.location.href = "ewaste_recycling.html";
+            } else if (material === "all") {
+                window.location.href = "sample2.html";
+            }
+        }
+    </script>
+
+</body>
+</html>
