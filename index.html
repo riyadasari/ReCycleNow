@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCycle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex; /* Use flexbox for easier layout */
+            flex-direction: column;
+            min-height: 100vh; /* Make the body take up full viewport height */
+            scroll-behavior: smooth;
+        }
+
+        /* ... rest of your CSS styles ... */
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+header {
+    background-color:  #28a745;
+    height:2rem;
+    padding-top:1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color:rgb(77, 67, 67);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.11rem;
+}
+
+.hero {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    color: rgb(77, 67, 67);
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.cta {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color:  #28a745;
+    color: rgb(77, 67, 67);
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+footer {
+    background-color:  #28a745;
+    color: rgb(77, 67, 67);
+    padding: 1rem;
+    text-align: center;
+}
+
+.social-links a {
+    color:rgb(77, 67, 67);
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    max-width: 43rem;
+    margin: 0 auto;
+}
+ol li{
+    list-style: none;
+}
+@media(max-width:408px){
+    nav ul{
+       display: none;
+        
+    }
+    
+    header{
+display: none;
+    }
+    footer{
+        display: none;
+    }
+   
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#topratedstations">Top rated stations</a></li>
+
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#about">About Us</a></li>
+
+            </ul>
+        </nav>
+        </header>
+    <div class="content">
+    <section id="home" class="hero">
+        <h1>Join Us in Making the Planet Greener</h1>
+        <p>Recycle waste, save resources, and make a difference today.</p>
+        <a href="sample.html" class="cta">Start Recycling Now</a>
+    </section>
+    <section id="topratedstations">
+        <h2>Top Rated Review Stations</h2>
+        <a href="topRatedReview.html" class="cta">View</a>
+            
+        </h2>
+    </section>
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <p>Step-by-step guide to our recycling process.</p>
+      
+        <p>1. Refine your search.This platform allows you to filter results by the type of material (e.g., electronics, paper, glass).</p>
+        <p>2. Select the material that you want to recycle.</p>
+        <p>3. Select the most convenient location based on your need and distance.</p>
+        <p>4. View results that satisfy you.</p>
+      </section>
+    <section id="about">
+        <h2>About Us</h2>
+        
+        <p>Welcome to GO GREENER your go-to platform for promoting a greener tomorrow! We make it easy for you to locate local recycling
+            stations, empowering communities to recycle effectively and reduce waste. Our mission is to  inspire environmental 
+            responsibility by connecting people with resources that support sustainability.
+            Together, let’s turn small actions into big changes for a cleaner, healthier planet.</p>
+    </section>
+    
+   
+</div>
+    <footer>
+        <p>&copy; 2024 EcoCycle. All rights reserved.</p>
+       
+    </footer>
+    <script>
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="l6hEcQwnLZfZ-88UoLzO3";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+        </script>
+</body>
+</html>
