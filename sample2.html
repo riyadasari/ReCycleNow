@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycle Now! - Find E-waste Collection Centers in Pune</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .header {
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #search-input {
+            width: 80%;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #search-input:focus {
+            border-color: #28a745;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+        }
+
+        .content {
+            display: flex;
+            gap: 20px;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 12px;
+            margin-bottom: 8px;
+            background-color: white;
+            color: #28a745;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar a:hover {
+            background-color: #218838;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .maincontent {
+            flex-grow: 1;
+        }
+
+        .info {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .locationheading, .locationheading2 {
+            color: #1e7e34;
+        }
+
+        .locationheading {
+            margin-bottom: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        hr {
+            border: 1px solid #eee;
+            margin: 20px 0;
+        }
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column; /* Stack sidebar and main content vertically */
+            }
+
+            .sidebar {
+                width: 100%; /* Sidebar takes full width */
+                margin-bottom: 20px;
+            }
+            #search-input{
+              width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Recycle Now!</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search by area">
+        </div>
+        <div class="content">
+            <div class="sidebar">
+                    <a href="#AmbegaonBudruk">Ambegaon Budruk</a>
+                    <a href="#AundhRoad">Aundh Road</a>
+                    <a href="#Ashoknagar">Ashoknagar</a>
+                    <a href="#Baner">Baner</a>
+                    <a href="#DeccanGymkhana">Deccan Gymkhana</a>
+                    <a href="#Dhankawadi">Dhankawadi</a>
+                    <a href="#Fatimanagar">Fatimanagar</a>
+                    <a href="#GaneshPeth">Ganesh Peth</a>
+                    <a href="#Gokhalenagar">Gokhale Nagar</a>
+                    <a href="#Hadapsar">Hadapsar</a>
+                    <a href="#Hadapsar Industrial Area">Hadapsar Industrial Area</a>
+                    <a href="#Kalyaninagar">Kalyani nagar</a>
+                    <a href="#Karvenagar">Karve nagar</a>
+                    <a href="#Katraj">Katraj</a>
+                    <a href="#Kasba Peth">Kasba Peth</a>
+                    <a href="#Kharadi">Kharadi</a>
+                    <a href="#Kondhwa">Kondhwa</a>
+                    <a href="#KondhwaBudruk">Kondhwa Budruk</a>
+                    <a href="#Kothrud">Kothrud</a>
+                    <a href="#MangalWarPeth">Mangalwar Peth</a>
+                    <a href="#NanaPeth">Nana Peth</a>
+                    <a href="#NaviPeth">Navi Peth</a>
+                    <a href="#Narayangaon">Narayangaon</a>
+                    <a href="#NDARoad">NDA Road</a>
+                    <a href="#PaudRoad">Paud Road</a>
+                    <a href="#Phursungi">Phursungi</a>
+                    <a href="#PimpriChinchwad">Pimpri Chinchwad</a>
+                    <a href="#Pirangut">Pirangut</a>
+                    <a href="#RastaPeth">Rasta Peth</a>
+                    <a href="#SadashivPeth">Sadashiv Peth</a>
+                    <a href="#SataraRoad">Satara Road</a>
+                    <a href="#SenapatiBapatRoad">Senapati Bapat Road</a>
+                    <a href="#ShaniwarPeth">Shaniwar Peth</a>
+                    <a href="#Shivajinagar">Shivajinagar</a>
+                    <a href="#ShukrawarPeth">Shukrawar Peth</a>
+                    <a href="#UruliDevachi">Uruli Devachi</a>
+                    <a href="#VadgaonBudruk">Vadgaon Budruk</a>
+                    <a href="#Vimannagar">Viman Nagar</a>
+            </div>
+            <div class="maincontent">
+                <div class="info">
+                    <h2 id="AmbegaonBudruk" class="locationheading">Ambegaon Budruk</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo">Kuldeep E-waste Disposals is MPCB Authorized vendor that specialize in the E-WASTE Collection, Transportation, Dismantling and Recycling wide range of E-WASTE materials in various sectors like. IT Companies, MNC's, Manufacturing companies, College, Hospitals, Private and Government Organizations etc. we are the best E-waste buyers in Pune. Authorize recyclers in Pune. The best E waste collection in Pune city and around. We also do Extended Producer Responsibility (EPR) support for manufacturing companies."</p>
+                </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121062.1114542887!2d73.80508845462468!3d18.520269749517777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ead9cf760c79%3A0xa6a0989a08aba550!2sKuldeep%20E-Waste%20Disposals%20-%20E%20Waste%20Buyer%20Pune!5e0!3m2!1sen!2sin!4v1732887747562!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+            </div>
+                <hr>
+                <div class="info">
+                    <h2 id="AundhRoad" class="locationheading">Aundh Road</h2>
+                    <h3 class="locationheading2">Plastics/Objects/Paper</h3>
+                    <p class="centersinfo">We collect your old electronic/electrical items, furniture, bicycles, kitchen utensils, etc.  We repair and re-use what we can and dismantle and recycle the rest. By organizing V-Collect events, SWaCH channelizes most of these items towards recycling and re-use, and away from the dumps. (V-Collect). Contact us to organize a V-Collect drive today!</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2900700119726!2d73.81223957592799!3d18.560956867937957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfed223ca86d%3A0x1a70c09e9b3c2fc6!2sSWaCH%20V%20Collect%20Centre%20Aundh!5e0!3m2!1sen!2sin!4v1732888307029!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="info">
+                    <h2 id="Ashoknagar" class="locationheading">Ashoknagar</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo">We do waste recycling,electronic waste removal and disposal</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.274291320512!2d73.9446616!3d18.5616687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1c75df4bb05%3A0x6b39c0bfcaa039fc!2sWelkin%20E-Waste%20Solutions!5e0!3m2!1sen!2sin!4v1733843409447!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <hr><div class="info">
+                    <h2 id="Baner"class="locationheading">Baner</h2>
+                    <h3 class="locationheading2">Dry waste/E-waste/Urban waste</h3>
+                    <p class="centersinfo">We collect all urban discards like utensils, clothes, toys, books, appliances which are working and in good condition. They would be donated to our partner NGOs or to those who can make use of them</p>
+                    <p class="centersinfo">We collect all dry waste which can be recycled such as paper, plastic, glass, tetrapak, metals, thermocol, e-waste and many other recyclable items</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.337107892758!2d73.772588475928!3d18.558834668002902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf6dc5c3f56f%3A0xb168c5d4a29d387e!2sProEarth%20Ecosystems%20Private%20Limited!5e0!3m2!1sen!2sin!4v1732889639178!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+                
+                <hr>
+                <div class="info">
+                    <h2 id="DeccanGymkhana" class="locationheading">Deccan Gymkhana</h2>
+                    <h3 class="locationheading2">E-waste,Plastic,Iron,Steel</h3>
+                    <p class="centersinfo">We buy all types of scrap which includes iron,steel,aluminium,copper,brass,battery,plastic,electronics,cables</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.1603879131217!2d73.8483869!3d18.5216529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c12c63701af3%3A0xf95d23a1a72cd24e!2sOM%20SAI%20SCRAP!5e0!3m2!1sen!2sin!4v1733844247090!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <hr>
+                <div class="info">
+                    <h2 id="Dhankawadi" class="locationheading">Dhankawadi</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo">The E-waste collection is managed by SWaCH (solid Waste Collection and Handling) Pune's first MPCB-authorised e-waste collection centre</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.401975593867!2d73.8544909!3d18.465442499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eab9ec28b989%3A0xf8fd8644645292d3!2sSWaCH%20E-Waste%20Collection%20Center!5e0!3m2!1sen!2sin!4v1733844888459!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                 <hr>
+                 <div class="info">
+                    <h2 id="Fatimanagar" class="locationheading">Fatimanagar</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo"></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.7005764899645!2d73.9152375!3d18.497217199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c190fdee44b5%3A0x897ec4ad71209a76!2sMahalaxmi%20E%20Recyclers%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1733846170561!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 </div>
+                 <hr>
+                 <div class="info">
+                    <h2 id="GaneshPeth" class="locationheading">Ganesh Peth</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo"></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.294870992903!2d73.8633596!3d18.5155724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c069b043808d%3A0xeab95bd1bd97adb4!2sSayma%20E-waste%20Pune!5e0!3m2!1sen!2sin!4v1733885818699!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 </div>
+                 <hr>
+                 <div class="info">
+                    <h2 id="Gokhalenagar" class="locationheading">Gokhale Nagar</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo"></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.0618601248675!2d73.826686!3d18.526106499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf25cb5a185f%3A0x51bd9b4bcd2d3528!2sAarti%20scrap%20center!5e0!3m2!1sen!2sin!4v1733886639416!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 </div>
+                 <hr>
+                <div class="info">
+                    <h2 id="Hadapsar" class="locationheading">Hadapsar</h2>
+                    <h3 class="locationheading2">Plastic/Paper/Iron/Steel</h3>
+                    <p class="centersinfo"></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3158982988994!2d73.9367527!3d18.5146215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c300bed0b433%3A0x1e50b1ee6b87c497!2sSahani%20scrab%20center!5e0!3m2!1sen!2sin!4v1733887290683!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                <hr>
+                <div class="info">
+                    <h2 id="Hadapsar Industrial Area" class="locationheading">Hadapsar Industrial Area</h2>
+                    <h3 class="locationheading2">E-waste/Iron/Steel</h3>
+                    <p class="centersinfo">We Sunil Scrap Centre are well-established scrap buyers.We have earned a reputation through our hard work,dedication,friendly and courteous services.We specialize in various scrap buying services and help our clients fetch the best value for the scrap.We are committed to providing our clients premium quality,cost -effective,credible and timely execution of our services</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.7973701237797!2d73.92692319999999!3d18.4928354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c12c2650bac7%3A0xc7249e43de8f9c99!2sSunil%20Scrap%20Centre!5e0!3m2!1sen!2sin!4v1733888020376!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>   
+                <hr>
+                <div class="info">
+                    <h2 id="Kalyaninagar" class="locationheading">Kalyani nagar</h2>
+                    <h3 class="locationheading2">Plastic/Paper/Glass bottles/Broken Glass/Thermocol/E-waste/Metal/Cardboard</h3>
+                    <p class="centersinfo"> We accept only clean and dry waste materials as it is sent to authorised Recyclers. It is the first of its kind in Pune City initiated by Team Swastha Kalyani Nagar.</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.603435343266!2d73.9016812!3d18.5468144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c166e7a2da33%3A0x6b0fdb7b950379bb!2sResource%20Recycling%20Center%20(R.R.C)!5e0!3m2!1sen!2sin!4v1733888494099!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+                </div>
+                 <hr>
+                 <div class="info">
+                    <h2 id="Karvenagar" class="locationheading">Karve nagar</h2>
+                    <h3 class="locationheading2">Plastic/Multilayered plastic wrappers</h3>
+                    <p class="centersinfo">reCharkha-The Ecosocial tribe woorks on Upcycling waste plastic bags and multilayered plastic wrappers.Our process of upcycling is helping revive the tradiitional craft of weaving as we use a charkha and a handloom, which are traditional equipment for weaving that do not use any electricity or heat or chemicals.Thus making the upcycling process itself sustainable.In turn,these equipments use manual labour and thus provide livelihood opportunities to our tribal women and youth.Our upcycled-handwoven products include Handbags,Totes,Purses,Home decor and Office bags</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.926884067654!2d73.8212782!3d18.4869708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2d591b82cf%3A0x48a2f10219ae5862!2sreCharkha%20-%20The%20EcoSocial%20Tribe!5e0!3m2!1sen!2sin!4v1733889459069!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 </div>
+                 <hr>
+                 <div class="info">
+                    <h2 id="Katraj" class="locationheading">Katraj</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo">Kuldeep E-waste Disposals is MPCB authorised that specialize in E-waste collection,Transportation,Dismantling and Recyclimg wide range of E-waste materials in various sectors like IT companies,MNC's,Manufacturing companies,Colleges,Hospitals.</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.74742457636!2d73.85755639999999!3d18.4497736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ead9cf760c79%3A0xa6a0989a08aba550!2sKuldeep%20E-Waste%20Disposals%20-%20E%20Waste%20Buyer%20Pune!5e0!3m2!1sen!2sin!4v1733890093582!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.8528047761874!2d73.8577823!3d18.4449912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eab9989824e3%3A0x9ab2a4ed4811b4f3!2sPrabhunath%20Traders%20(E-waste%20Management)!5e0!3m2!1sen!2sin!4v1733910985892!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 </div>
+                 <hr>
+                 <div class="info">
+                    <h2 id="Kasba Peth" class="locationheading">Kasba Peth</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo"></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.023768947674!2d73.86228!3d18.527828000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0671c84f649%3A0xbc92f84a37a0d175!2sEwaste%20in%20Pune%20(National%20Traders)!5e0!3m2!1sen!2sin!4v1733911509816!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 </div>
+                 <hr>
+                 <div class="info">
+                  <h2 id="Kharadi" class="locationheading">Kharadi</h2>
+                  <h3 class="locationheading2">Plastic/Paper/Iron</h3>
+                  <p class="centersinfo"></p>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.8026111581357!2d73.9344782!3d18.537820000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1b3c6eb3229%3A0xbf26bd8e5f3e583b!2sAmbika%20SCRAP%20Center!5e0!3m2!1sen!2sin!4v1735135914771!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 </div>
+                 <hr>
+                 <div class="info">
+                    <h2 id="Kondhwa" class="locationheading">Kondhwa</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo">We are the best Scrap buyers in Pune.We deal in all types of scrap,we buy all types of scrap in pune.Electronic/E-waste Scrap etc. </p>
+                    <p class="centersinfo">The goal of Taha Disposal is to make a chance to move waste into socially and modernly gainful crude materials like profitable metals,plastics and glass utilizing basic,cost productive,home developed,natural benevolent innovations suitable</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.268569712043!2d73.88544399999999!3d18.471490099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c10913aeb913%3A0x902cb38ed39ffb29!2sTaha%20Disposal%20Scrap%20Buyer%20in%20Pune!5e0!3m2!1sen!2sin!4v1735136672336!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+                 </div>
+                 <hr>
+                 <div class="info">
+                    <h2 id="KondhwaBudruk" class="locationheading">Kondhwa Budruk</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo">Authorised E waste recycler started operations in 2016.Engaged in handling recycling and reusing of waste electrical& electronics</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.167803054915!2d73.8842203!3d18.430688699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eb0140c417d7%3A0x3e09bcdea7ed88ef!2sPune%20Greens%20E-Waste%20Recycler%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1735136995563!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 </div>
+                 <hr>
+                 <div class="info">
+                    <h2 id="Kothrud" class="locationheading">Kothrud</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo"></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.4973125355987!2d73.81019739999999!3d18.506415599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfb90f94c5c5%3A0xcb70e493cc1b6a47!2sHitech%20Recycling%20(INDIA)%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1735138157546!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 </div>
+                 <hr>
+                 <div class="info">
+                    <h2 id="MangalWarPeth" class="locationheading">Mangalwar Peth</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo"></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.023768947674!2d73.86228!3d18.527828000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0671c84f649%3A0xbc92f84a37a0d175!2sEwaste%20in%20Pune%20(National%20Traders)!5e0!3m2!1sen!2sin!4v1735139211399!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 </div>
+                 <hr>
+                 <div class="info">
+                    <h2 id="NanaPeth" class="locationheading">Nana Peth</h2>
+                    <h3 class="locationheading2">Nana Peth</h3>
+                    <p class="centersinfo"></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.294870992903!2d73.8633596!3d18.5155724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c069b043808d%3A0xeab95bd1bd97adb4!2sSayma%20E-waste%20Pune!5e0!3m2!1sen!2sin!4v1735140161717!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 </div>
+                <hr>
+                <div class="info">
+                    <h2 id="NaviPeth" class="locationheading">Navi Peth</h2>
+                    <h3>E-waste</h3>
+                    <p class="centersinfo"></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.539651027273!2d73.8397167!3d18.5045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfb092f0762d%3A0xce70aebed1e4e458!2sE-Waste%20Collection%20Point!5e0!3m2!1sen!2sin!4v1735140486253!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <hr>
+                <div class="info">
+                    <h2 id="Narayangaon" class="locationheading">Narayangaon</h2>
+                    <h3 class="locationheading2">Plastic/Steel</h3>
+                    <p class="centersinfo">All types of scrap materials(plastic,steel,etc) we purchase and sell at good rates</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.553260640452!2d73.984552!3d19.1272446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdd3bc1da71d60f%3A0x208233315e98c572!2sShri%20Sai%20Scrap%20Center!5e0!3m2!1sen!2sin!4v1735140863447!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+                </div>
+                <hr>
+                <div class="info">
+                    <h2 id="NDARoad" class="locationheading">NDA Road</h2>
+                    <h3 class="locationheading2">Plastic</h3>
+                    <p class="centersinfo">"UPCYCLED-HANDWOVEN" products made from waste plastic such as plastic carry bags,food wrappers,glittery gift wrapeers and old audio/video cassette tapes.This waste plastic are handwoven using Charkha and Handloom by rural women and youth.We are social enterprise based in Pune working on conserving the environment and enable livelihoods.We offer sustainable alternatives for conscious consumers.Our products range from bags,accessories,school and office products,home decor and more</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.1700037034807!2d73.79748219999999!3d18.4759571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf6ba2d8604f%3A0x826e32385223101e!2sEcoKaari%20-%20Humanising%20Fashion!5e0!3m2!1sen!2sin!4v1735142124418!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <hr>
+                <div class="info">
+                    <h2 id="PaudRoad" class="locationheading">Paud Road</h2>
+                    <h3 class="locationheading2">E-waste/Plas</h3>
+                    <p class="centersinfo"></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.519662552471!2d73.7060383!3d18.505404399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bdbf52f0c355%3A0x7df8a504ffc75812!2sSoni%20Scrap%20Centre!5e0!3m2!1sen!2sin!4v1735211402188!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <hr>
+                <div class="info">
+                    <h2 id="Phursungi" class="locationheading">Phursungi</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo">We are Maharashtra Pollution Control Board Authorised Recyclers of E-waste scrap,we are licensed to Buy ewaste scraps from IT centers,Companies and other big and small companies</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.2423053435027!2d73.9784805!3d18.4726805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2e99ce49e1cbb%3A0xf48c478c7bd1137d!2sGreenBay%20E-Waste%20Recycler%20(Licensed)!5e0!3m2!1sen!2sin!4v1735142790589!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <hr>
+                <div class="info">
+                    <h2 id="PimpriChinchwad" class="locationheading">Pimpri Chinchwad</h2>
+                    <h3 class="locationheading2">Plastic/Paper/Metals</h3>
+                    <p class="centersinfo"></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.181963142147!2d73.7981831!3d18.610883599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9cbe7247a75%3A0xe869d040dde3b522!2sGrecycle%20scrap%20center!5e0!3m2!1sen!2sin!4v1735211728853!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h3 class="locationheading2">E-waste/Plastic</h3>
+                    <p class="centersinfo"></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.5244355971954!2d73.8284278!3d18.6404481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b90049f6ed4f%3A0x8edadd1018485f31!2sPCMC%20E-waste%20recycling%20and%20plastic%20Recyling%20%26%20Hobby%20Center!5e0!3m2!1sen!2sin!4v1735212076792!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <hr>
+                <div class="info">
+                    <h2 id="Pirangut" class="locationheading">Pirangut</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo"></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3517522174357!2d73.6736339!3d18.512999999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bd20857dcfe3%3A0xf27266372394489c!2sHi%20-%20Tech%20Recycling%20India%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1735212355722!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <hr>
+                <div class="info">
+                    <h2 id="RastaPeth" class="locationheading">Rasta Peth</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo">OM Recycling is a leaading WEEE recycling company that provides an eco friendly,secure and cost efficient disposal route for computer,IT & office equipment,WEEE and E-waste</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.20787600009!2d73.86639509999999!3d18.519505999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c169ae2308fb%3A0x416780598df0718a!2sOM%20Recycling!5e0!3m2!1sen!2sin!4v1735212819757!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <hr>
+                <div class="info">
+                    <h2 id="SadashivPeth" class="locationheading">Sadashiv Peth</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo">We are MPCB Authorised E-Waste recyclers and provide environment friendly disposal of your end of life electronic waste</p>
+                    <p class="centersinfo">We are leading into E-waste management service provider</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3601917649344!2d73.84874649999999!3d18.512618299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0719062de81%3A0xa24a85715896a00a!2sGREEN%20IT%20RECYCLING%20CENTER%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1735213421167!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo">E-waste Global is a Maharashtra Pollution Control Board (MPCB) certified E-waste Management Company,we deals with Corporates,Institution,NGO's,Society and individuals etc. </p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.4901930827855!2d73.8381271!3d18.5067377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf8b178b9435%3A0x5222625a9f5bea09!2sEwaste%20Global!5e0!3m2!1sen!2sin!4v1735213667867!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo">Harshita Green Recyclers is one of the leading companies providing e-waste management solutions across india with MPCB Authorization</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.4786460972664!2d73.8534306!3d18.5072601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1db59515959%3A0x9e8af74e38f098ed!2sHarshita%20Green%20Recyclers!5e0!3m2!1sen!2sin!4v1735213875983!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <hr>
+                <div class="info">
+                    <h2 id="SataraRoad" class="locationheading">Satara Road</h2>
+                    <h3 class="locationheading2">E-waste</h3>
+                    <p class="centersinfo"></p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.74742457636!2d73.85755639999999!3d18.4497736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ead9cf760c79%3A0xa6a0989a08aba550!2sKuldeep%20E-Waste%20Disposals%20-%20E%20Waste%20Buyer%20Pune!5e0!3m2!1sen!2sin!4v1735309191532!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <hr>
+            <div class="info">
+                <h2 id="SenapatiBapatRoad" class="locationheading">Senapati Bapat Road</h2>
+                <h3 class="locationheading2">E-waste</h3>
+                <p class="centersinfo"></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.9091982543323!2d73.8314221!3d18.533005000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf7757e17bf5%3A0xb34436b5bc8af0e3!2sEco%20Credible%20Enviro%20Solutions%20Pvt.Ltd.!5e0!3m2!1sen!2sin!4v1735309567792!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <hr>
+            <div class="info">
+              <h2 id="ShaniwarPeth" class="locationheading">Shaniwar Peth</h2>
+              <h3 class="locationheading">E-waste</h3>
+              <p class="centersinfo"></p>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.255641855703!2d73.8474263!3d18.5173463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c077567c654d%3A0x6267031713129e9f!2sRaj%20Scrap%20Centre!5e0!3m2!1sen!2sin!4v1735310112179!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <hr>
+            <div class="info">
+                <h2 id="Shivajinagar" class="locationheading">Shivajinagar</h2>
+                <h3 class="locationheading2">Plastic/E-waste/Metals</h3>
+                <p class="cenetrsinfo"></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.1603879131217!2d73.8483869!3d18.5216529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c12c63701af3%3A0xf95d23a1a72cd24e!2sOM%20SAI%20SCRAP!5e0!3m2!1sen!2sin!4v1735310752627!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <hr>
+           <div class="info">
+            <h2 id="ShukrawarPeth" class="locationheading">Shukrawar Peth</h2>
+            <h3 class="locationheading2">E-waste</h3>
+            <p class="cenetrsinfo"></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.404955925705!2d73.8579812!3d18.5105936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c06c42e370a5%3A0x59c5bb3fc06517b5!2sRaj%20Scrap%20and%20E-Waste!5e0!3m2!1sen!2sin!4v1735311287645!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+           <hr>
+           <div class="info">
+            <h2 id="UruliDevachi" class="locationheading">Uruli Devachi</h2>
+            <h3 class="locationheading2">E-waste</h3>
+            <p class="centersinfo">An e-waste business collects and recycles  electronics like phones and computers.They make sure these items are disposed of safely,protecting the environment.They also often extract valuable materials for reuse </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.5522283965865!2d73.9500202!3d18.4586289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0424a3b2acf%3A0x561b1f80a3bda7e0!2sPoona%20e%20Waste%20Solutions%20-%20e%20Turn%20recycling%20e%20waste%20Pune!5e0!3m2!1sen!2sin!4v1735312077862!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+           <hr>
+           <div class="info">
+            <h2 id="VadgaonBudruk" class="locationheading">Vadgaon Budruk</h2>
+            <h3 class="locationheading2">E-waste/Clothes</h3>
+            <p class="centersinfo"></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.3766415139917!2d73.8224572!3d18.4665911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf1b2edc9a65%3A0xd3876f8dcd8271a6!2sPoornam%20Ecovision%20Foundation!5e0!3m2!1sen!2sin!4v1735312795709!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+           <hr>
+           <div class="info">
+            <h2 id="Vimannagar" class="locationheading">Viman Nagar</h2>
+            <h3 class="locationheading2">E-waste</h3>
+            <p class="centersinfo">E-waste Global is a MPCB certified E-waste Management Company,we deals with Corporates,Institution,NGO's,Society and indiviuals stc.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.251445685052!2d73.9372307!3d18.562699300000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3a3e71340af%3A0xa6fa217820edb968!2sEwaste%20Global%20Collection%20Point!5e0!3m2!1sen!2sin!4v1735313185495!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+           <hr>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('search-input');
+        const infoDivs = document.querySelectorAll('.info');
+
+        searchInput.addEventListener('input', (event) => {
+            const searchTerm = event.target.value.toLowerCase();
+
+            infoDivs.forEach(infoDiv => {
+                const heading = infoDiv.querySelector('.locationheading');
+                const headingText = heading.textContent.toLowerCase();
+
+                if (headingText.includes(searchTerm)) {
+                    infoDiv.classList.remove('hidden');
+                } else {
+                    infoDiv.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
