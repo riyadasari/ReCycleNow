@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pune Recycling Centers</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .card-container {
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      /* Adjust spacing here */
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 15px;
+      width: 250px;
+      height: 300px;
+      max-width: 100%;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .card h2 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .rating {
+      color: gold;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Top-Rated Recycling Centers in Pune</h1>
+
+  <div class="card-container" id="center-list"></div>
+
+  <script>
+    // Replace with actual data from your API or database
+    const recyclingCenters = [
+      {
+        name: "GREEN IT RECYCLING CENTER PVT. LTD.",
+        address: "5 Ganeshprasad IInd Floor, 890",
+        rating: 4.8,
+        description: "Recycles paper, plastic, glass, and electronics.",
+        imageUrl: "https://lh3.googleusercontent.com/p/AF1QipPt1a5gBFzxlyE12ZSXbEdiTukIRxU3J-9XpbVa=s1360-w1360-h1020"
+      },
+      {
+        name: "ProEarth Ecosystems Private Limited",
+        address: "Abhipreet Residency, 301, 1, Pan Card Club Rd, near Krushna Medical, Baner",
+        rating: 4.6,
+        description: "",
+        imageUrl: "https://lh3.googleusercontent.com/p/AF1QipO6r3MkbEz778Y5SpzlODQR2u5NFJ3tTEcjEm2A=s1360-w1360-h1020"
+      },
+      {
+        name: "Prabhunath Traders (E-waste Management Company)",
+        address: " 68/03, near jain mandir, Santosh Nagar, Katraj",
+        rating: 4.1,
+        description: "Accepts a wide range of recyclable materials.",
+        imageUrl: "https://lh3.googleusercontent.com/p/AF1QipNfwGnR1hlb7G14PdIPZKSFtWt8jZNBpopmMw8=s1360-w1360-h1020"
+      },
+      {
+        name: "Resource Recycling Center (R.R.C)",
+        address: "Central Ave, near Ganpati Mandir, Kalyani Nagar",
+        rating: 4.8,
+        description: "",
+        imageUrl: "https://lh3.googleusercontent.com/p/AF1QipNARYXwC6m5qDERnKR9WEuVGh7adKKYIfd_egPg=s1360-w1360-h1020"
+      },
+      {
+        name: "Kuldeep E-Waste Disposals",
+        address: "Manikmoti Complex, Office No.13, Katraj, Off, Pune - Satara Rd, opp. Kanchan Hp Gas Agency",
+        rating: 3.9,
+        description: "",
+        imageUrl: "https://lh3.googleusercontent.com/p/AF1QipNBY65C2MzAaNNJQDPhUKnlouWPmTeL6CPvuY99=s1360-w1360-h1020"
+      },
+      {
+        name: "SWaCH V Collect Centre Aundh",
+        address: "OLD Aundh Ward Office",
+        rating: 4.7,
+        description: "Recycles old electronic/electrical items, furniture, bicycles, kitchen utensils, etc",
+        imageUrl: "https://lh3.googleusercontent.com/p/AF1QipOgZnKBLbZGrNZdB3b9ao_uUNK8wwJzP6XYOM4e=s1360-w1360-h1020"
+      },
+      {
+        name: "Welkin E-Waste Solutions",
+        address: "Office no. 22, City Vista Wing B, near World Trade Center, Ashoka Nagar, Kharadi",
+        rating: 5,
+        description: "Specializes in e-waste recycling",
+        imageUrl: "data:image/png;base64,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"
+      },
+      {
+        name: "Mahalaxmi E Recyclers Pvt. Ltd.",
+        address: "Plot No 77&78, Subplot No 3A, 77 & 78, next to Rohini Signs, Ramtekdi Industrial Area, Hadapsar",
+        rating: 4.5,
+        description: "Specializes in waste collection and recycling",
+        imageUrl: "https://lh5.googleusercontent.com/p/AF1QipP1U69N_TxyMTIBuZLWkyMiSsN36rgEJG9M8FwF=w532-h240-k-no"
+      },
+      {
+        name: "CERO - Mahindra MSTC Recycling Pvt. Ltd. (MMRPL) Pune",
+        address: "Gate No. 103, Village - Kanhe, Old Mumbai - Pune Hwy",
+        rating: 4.5,
+        description: "Scrap car recycling station",
+        imageUrl: "https://lh3.googleusercontent.com/p/AF1QipNrim7h2vz24JsE7FTwKe832x2WcaklgEKL5oHU=s1360-w1360-h1020"
+      },
+      {
+        name: "Aman Scrap Center",
+        address: "Chonde patil road, near ROHAN NILAY SOCIETY, Rohan Nilay, Aundh",
+        rating: 4.9,
+        description: "Scrap seller amd recycler",
+        imageUrl: "https://lh3.googleusercontent.com/p/AF1QipMJx5aa0-W0O4wA56w67uH6Qf8dBuTYJT_s6HqZ=s1360-w1360-h1020"
+      },
+      {
+        name: "Ewaste in Pune (National Traders)",
+        address: "C -48, Veer Santaji Ghorpade Rd, near gatital police choki, Mangalwar Peth, Kasba Peth",
+        rating: 5,
+        description: "Waste management service",
+        imageUrl: "https://lh3.googleusercontent.com/p/AF1QipMImZMmhcRBb2vE7HOl9ll0Hh4wSTbp1kIZH1-s=s1360-w1360-h1020"
+      },
+      {
+        name: "Sunil Scrap Centre",
+        address: "Survey No. 89, Samarth Nagar, Road, Hingane Mala, Ramtekadi, Hadapsar",
+        rating: 5,
+        description: "Scrap merchant",
+        imageUrl: "https://content.jdmagicbox.com/comp/pune/f3/020pxx20.xx20.191219155029.c1f3/catalogue/sunil-scrap-centre-hadapsar-pune-scrap-buyers-4257d0zy3i.jpg"
+      }
+    ];
+
+    const centerList = document.getElementById("center-list");
+
+    recyclingCenters.forEach(center => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+
+      const image = document.createElement("img");
+      image.src = center.imageUrl;
+      card.appendChild(image);
+
+      const title = document.createElement("h2");
+      title.textContent = center.name;
+      card.appendChild(title);
+
+      const address = document.createElement("p");
+      address.textContent = center.address;
+      card.appendChild(address);
+
+      const rating = document.createElement("p");
+      rating.textContent = "Rating: " + center.rating + " stars";
+      rating.classList.add("rating");
+      card.appendChild(rating);
+
+      const description = document.createElement("p");
+      description.textContent = center.description;
+      card.appendChild(description);
+
+      centerList.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
